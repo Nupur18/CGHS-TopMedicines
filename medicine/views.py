@@ -26,7 +26,6 @@ def view_medicine(request):
         sorted_df['S_No'] = np.arange(1, len(sorted_df)+1)
 
         sorted_df = sorted_df.iloc[:, [4,0,2,1,3]]
-        print(sorted_df)
 
         data_dict = sorted_df.to_dict(orient='records')
         context['data'] = data_dict
