@@ -32,7 +32,7 @@ def view_medicine(request):
         data_dict = sorted_df.to_dict(orient='records')
         context['data'] = data_dict
 
-        context['file'] = sorted_df.to_excel('media/file.xlsx', index=False)
+        # context['file'] = sorted_df.to_excel('media/file.xlsx', index=False)
 
     return render(request, 'index.html', context)
     
