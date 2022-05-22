@@ -2,7 +2,6 @@ from django.shortcuts import render
 from django.core.files.storage import FileSystemStorage
 import pandas as pd
 import numpy as np
-from sympy import content
 
 # Create your views here.
 def index(request):
@@ -32,7 +31,7 @@ def view_medicine(request):
         data_dict = sorted_df.to_dict(orient='records')
         context['data'] = data_dict
 
-        # context['file'] = sorted_df.to_excel('media/file.xlsx', index=False)
+        sorted_df.to_excel('media/file.xlsx', index=False)
 
     return render(request, 'index.html', context)
     
